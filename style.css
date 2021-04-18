@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+  background: linear-gradient(rgba(78, 120, 168, 0.5), rgb(20, 55, 100, .6));
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 5% auto;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas: 
+  "display display display display"
+  "AC C division times"
+  "seven eight nine minus"
+  "four five six plus"
+  "one two three equal" 
+  "zero zero dot equal"
+  ;
+}
+
+.display {
+  grid-area: display;
+  text-align: right;
+  background-color: black;
+  margin: 3px;
+  color: whitesmoke;
+  border-radius: 10px;
+  border: 2px solid rgb(246, 251, 253);
+}
+
+input {
+  margin: 2px;
+  background-color: rgb(0, 0, 0);
+  color: aliceblue;
+  border: none;
+  text-align: right;
+  padding-right: 6px;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.equal {
+  grid-area: equal; 
+}
+
+#AC-redish, #C-redish {
+  background-color: rgba(189, 46, 46, 0.8);
+  transition: 0.5s ease;
+}
+
+#AC-redish:hover, #C-redish:hover {
+  background-color: rgb(189, 46, 46);
+}
+
+#blue {
+  background-color: rgba(20, 98, 161, 0.6);
+  transition: 0.5s ease;
+}
+
+#blue:hover {
+  background-color: rgb(23, 109, 180);
+}
+
+.clcButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  margin: 3px;
+  background-color: rgba(23, 22, 32, 0.7);
+  color: whitesmoke;
+  cursor: pointer;
+  font-size: 22px;
+  font-family: 'Fredoka One', cursive;
+  border-radius: 10px;
+  border: 2px solid;
+  transition: 0.5s ease;
+}
+.clcButton:hover {
+  background-color: rgba(23, 22, 32);
+}
