@@ -1,8 +1,40 @@
 function App () {
   const [expression, setExpression] = React.useState("");
-
+  const [output, setOutput] = React.useState(0);
+ 
+  //defining display function
   const display = (symbol) => {
     setExpression((prev) => prev + symbol);
+
+    if (expression[expression.length - 1] == "=") {
+      if (/[0-9]/.test(symbol)) {
+        setExpression(symbol);
+      } else {
+        setExpression(output + symbol);
+      }
+    }
+  };
+
+  //defining calculate function
+  const calculate = () => {
+    setOutput(eval(expression));
+    setExpression((prev) => prev + "=");
+  };
+
+  //defining allClear & clear functions
+  const allClear = () => {
+    setExpression("");
+    setOutput(0);
+  };
+
+  const clear =  () => {
+    setExpression((prev) => 
+    prev
+    .split("")
+    .slice(0, prev.length - 1)
+    .join("")
+    )
+    setOutput(0);
   };
 
     return (
@@ -10,11 +42,12 @@ function App () {
         <div className="grid">
           <div className="display">
             <input type="text" value={expression} placeholder="0" disable></input>
+            <div className="result">{output}</div>
           </div>
-          <div onClick={display} className="clcButton AC" id="AC-redish">AC</div>
-          <div onClick={display} className="clcButton C" id="C-redish">C</div>
+          <div onClick={allClear} className="clcButton AC" id="AC-redish">AC</div>
+          <div onClick={clear} className="clcButton C" id="C-redish">C</div>
           <div onClick={() => display(" / ")} className="clcButton division">/</div>
-          <div onClick={() => display(" x ")} className="clcButton times">x</div>
+          <div onClick={() => display(" * ")} className="clcButton times">x</div>
           <div onClick={() => display("7")} className="clcButton seven ">7</div>
           <div onClick={() => display("8")} className="clcButton eight">8</div>
           <div onClick={() => display("9")} className="clcButton nine">9</div>
@@ -26,7 +59,7 @@ function App () {
           <div onClick={() => display("1")} className="clcButton one">1</div>
           <div onClick={() => display("2")} className="clcButton two">2</div>
           <div onClick={() => display("3")} className="clcButton three">3</div>
-          <div onClick={display} className="clcButton equal" id="blue">=</div>
+          <div onClick={calculate} className="clcButton equal" id="blue">=</div>
           <div onClick={() => display("0")} className="clcButton zero">0</div>
           <div onClick={() => display(".")} className="clcButton dot">.</div>
         </div>

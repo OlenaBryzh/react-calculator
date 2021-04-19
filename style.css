@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 body {
-  background: linear-gradient(rgba(78, 120, 168, 0.5), rgb(20, 55, 100, .6));
+  background: linear-gradient( rgba(78, 120, 168, 0.3), rgba(24, 67, 122, 0.6));
   background-attachment: fixed;
 }
 
@@ -33,16 +33,22 @@ body {
   margin: 3px;
   color: whitesmoke;
   border-radius: 10px;
-  border: 2px solid rgb(246, 251, 253);
+  border: 2px solid rgb(246, 251, 253, .9);
 }
 
 input {
-  margin: 2px;
+  margin: 4px;
   background-color: rgb(0, 0, 0);
   color: aliceblue;
   border: none;
   text-align: right;
   padding-right: 6px;
+}
+
+.result {
+  padding: 3px 15px;
+  color: rgb(43, 158, 253);
+  font-size: 28px;
 }
 
 .zero {
@@ -59,7 +65,7 @@ input {
 }
 
 #AC-redish:hover, #C-redish:hover {
-  background-color: rgb(189, 46, 46);
+  background-color: rgb(201, 39, 39);
 }
 
 #blue {
@@ -83,9 +89,10 @@ input {
   font-size: 22px;
   font-family: 'Fredoka One', cursive;
   border-radius: 10px;
-  border: 2px solid;
+  border: 2px solid rgb(255, 255, 255, .3);
   transition: 0.5s ease;
 }
 .clcButton:hover {
   background-color: rgba(23, 22, 32);
+  border: 2px solid rgb(247, 244, 244);
 }
