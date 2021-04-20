@@ -68,12 +68,12 @@ input {
   background-color: rgb(201, 39, 39);
 }
 
-#blue {
+#equals {
   background-color: rgba(20, 98, 161, 0.6);
   transition: 0.5s ease;
 }
 
-#blue:hover {
+#equals:hover {
   background-color: rgb(23, 109, 180);
 }
 
@@ -95,4 +95,10 @@ input {
 .clcButton:hover {
   background-color: rgba(23, 22, 32);
   border: 2px solid rgb(247, 244, 244);
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin: 15% 30%;
+  }
 }

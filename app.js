@@ -40,12 +40,12 @@ function App () {
     return (
       <div className="container">
         <div className="grid">
-          <div className="display">
+          <div className="display" id="display">
             <input type="text" value={expression} placeholder="0" disable></input>
             <div className="result">{output}</div>
           </div>
           <div onClick={allClear} className="clcButton AC" id="AC-redish">AC</div>
-          <div onClick={clear} className="clcButton C" id="C-redish">C</div>
+          <div onClick={clear} className="clcButton C"  id="C-redish">C</div>
           <div onClick={() => display(" / ")} className="clcButton division">/</div>
           <div onClick={() => display(" * ")} className="clcButton times">x</div>
           <div onClick={() => display("7")} className="clcButton seven ">7</div>
@@ -59,7 +59,7 @@ function App () {
           <div onClick={() => display("1")} className="clcButton one">1</div>
           <div onClick={() => display("2")} className="clcButton two">2</div>
           <div onClick={() => display("3")} className="clcButton three">3</div>
-          <div onClick={calculate} className="clcButton equal" id="blue">=</div>
+          <div onClick={calculate} className="clcButton equal" id="equals">=</div>
           <div onClick={() => display("0")} className="clcButton zero">0</div>
           <div onClick={() => display(".")} className="clcButton dot">.</div>
         </div>
